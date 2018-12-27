@@ -224,7 +224,7 @@ var game = {
                 $(".answer3").hide();
                 $(".answer4").hide();
 
-                $(".result").text("You've answered all questions! Reload the page to play again!");
+                $(".result").text("You've answered all questions and got " + game.correct + "/" + Object.keys(game.pages).length + " correct! Reload the page to play again!");
         }
     },
 
