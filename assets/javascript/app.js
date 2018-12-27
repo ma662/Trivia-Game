@@ -25,18 +25,18 @@ var game = {
 
         set2: {
             question: "Which is the most prominent element in the Sun?",
-            answer1: "Helium",
-            answer2: "Iron",
-            answer3: "Sulphur",
-            corrAnswer: "Hydrogen"
+            answer1: "helium",
+            answer2: "iron",
+            answer3: "sulphur",
+            corrAnswer: "hydrogen"
         },
 
         set3: {
             question: "Which is the closest active galaxy to the Milky Way?",
-            answer1: "Sagittarius A",
-            answer2: "Cygnus 11",
-            answer3: "Orionis A",
-            corrAnswer: "Centarus A"
+            answer1: "sagittarius A",
+            answer2: "cygnus 11",
+            answer3: "orionis A",
+            corrAnswer: "centarus A"
         },
 
         set4: {
@@ -49,18 +49,18 @@ var game = {
 
         set5: {
             question: "The Gemini North telescope is located at high altitude in which 50th U.S. state?",
-            answer1: "New Jersey",
-            answer2: "Minnesota",
-            answer3: "New York",
-            corrAnswer: "Hawaii"
+            answer1: "new jersey",
+            answer2: "minnesota",
+            answer3: "new york",
+            corrAnswer: "hawaii"
         },
 
         set6: {
             question: "Which of these planets could, theoretically, float if submerged in water due to its density?",
-            answer1: "Mercury",
-            answer2: "Venus",
-            answer3: "Jupiter",
-            corrAnswer: "Saturn"
+            answer1: "mercury",
+            answer2: "venus",
+            answer3: "jupiter",
+            corrAnswer: "saturn"
         },
 
         set7: {
@@ -93,7 +93,14 @@ var game = {
             answer2: "the tango nebula",
             answer3: "the treant nebula",
             corrAnswer: "the eagle nebula"
+        },
 
+        set11: {
+            question: "The asteroid belt is a well known astronomical 'highway' that exists between the orbits of the gas giant Jupiter and the rocky inner planet Mars. However, within this 'highway' other celestial bodies can be found. Which of the following can be found in the asteroid belt, Ceres being the example?",
+            answer1: "quasars",
+            answer2: "pulsars",
+            answer3: "oort clouds",
+            corrAnswer: "dwarf planets"
         }
     }, // end question bank
 
