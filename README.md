@@ -1,2 +1,2 @@
 # TriviaGame
-Trivia browser game using timers built with jQuery using JavaScript, HTML and CSS.
+A (slightly difficult) trivia browser game using timers built with jQuery, JavaScript, HTML/CSS. Players have 10 seconds to guess the correct answer! 
