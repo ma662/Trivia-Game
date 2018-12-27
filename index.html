@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <title>Trivia Game!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+        <!-- <script src="main.js"></script> -->
+    </head>
+    <body>
+
+        <div class="title"></div>
+        <div class="question"></div>
+        <div class="answer1"></div>
+        <div class="answer2"></div>
+        <div class="answer3"></div>
+        <div class="answer4"></div>
+        <div class="result"></div>
+
+
+        <script type="text/javascript">
+
+            var game = {
+                // this is my game object
+                score: 0,
+                losses: 0,
+                count: 0,
+
+                counting: false,
+                activeCounter: null,
+                
+                // Question & Answer Bank
+                pages: { 
+                    q1: { 
+                        question: "who won the superbowl?",
+                        answer1: "the hawks",
+                        answer2: "the jets",
+                        answer3: "the giants",
+                        corrAnswer: "the shoes"
+                    },
+
+                    q2: {
+                        question: "who are you?",
+                        answer1: "do you even know anymore?",
+                        answer2: "where you goin, who you seein?",
+                        corrAnswer: "and what happen to believin?"
+                    },
+
+                    q3: {
+                        question: "cats are best?",
+                        answer1: "yes",
+                        answer2: "no",
+                        answer3: "yes but i love dogs",
+                        corrAnswer: "no, objectively they are not"
+                    },
+
+                    q4: {
+                        question: "question 44444",
+                        answer1: "thing",
+                        answer2: "bull",
+                        answer3: "wwaahhh",
+                        corrAnswer: "1jgakdfjlakjkjaiutie9839839282980jdjkajjjjjjjj"
+                    } 
+                    
+                    // ... more 
+
+                }, // end question bank
+
+                shuffle: function(a) {
+                    var j, x, i;
+                    for (i = a.length - 1; i > 0; i--) {
+                        // i = 7 - 1, 6; 6 > 0; 6--
+                        j = Math.floor(Math.random() * (i + 1));
+                        // console.log("j is: " + j);
+                        x = a[i];
+                        // console.log("x is: " + x);
+                        a[i] = a[j];
+                        // console.log("a[i] is: " + a[j]);
+                        a[j] = x;
+                        // console.log("a[j] is: " + x);
+                        }
+                    return a;
+                    },
+
+                countDown: function() {
+                    var num = game.count;
+                    console.log(num);
+
+                    if (num > 0) {
+                        num--;
+                    }
+                    else {
+                        num = 0;
+                        game.counting = false;
+                        clearInterval(game.activeCounter);
+                    }
+                    
+                    game.count = num;
+                },
+
+                loadPage: function() {
+                    game.counting = true;
+
+                    if (game.counting) {
+                        // seconds to answer question    
+                        game.count = 10;
+                        game.activeCounter = setInterval(this.countDown, 1000);
+                    }
+                    
+                    // if (counting) {
+                    //     setInterval(this.countDown, 1000);
+                    //     console.log(game.count);
+                    // }
+
+
+                }
+
+            }; // end game object
+
+            // console.log(game.countDown());
+            
+            game.loadPage();
+        
+            // hit play to start
+                // for length of pages, do this
+                    // for (var i=0; i<Object.keys(game.pages).length; i++) {
+                    // // page 0 
+                    //     // q1 load stuff
+                    //     $(".question").text(game)
+
+
+                    // }
+                        // get game q# objects, push all into array 
+                        // shuffle array, 
+                        // place shuffled answers into page 
+                        // start timer
+
+                        // if answer === corrAnswer, 
+                            // question win, score ++
+                        
+                        // if timer = 0
+                            // question lose, losses++
+
+            // time to display stuff
+            $(".question").text(game.pages.q1.question);
+
+            myArray = [1, 2, 3, 4, 5, 6, 7];
+            // function shuffle(a) {
+            //     var j, x, i;
+            //         for (i = a.length - 1; i > 0; i--) {
+            //             // i = 7 - 1, 6; 6 > 0; 6--
+            //             j = Math.floor(Math.random() * (i + 1));
+            //             console.log("j is: " + j);
+            //             x = a[i];
+            //             console.log("x is: " + x);
+            //             a[i] = a[j];
+            //             console.log("a[i] is: " + a[j]);
+            //             a[j] = x;
+            //             console.log("a[j] is: " + x);
+            //         }
+            //         return a;
+            // }
+
+            
+            // var x = game.shuffle(myArray);s
+
+            // console.log(x);
+
+        </script>        
+    </body>
+</html>
